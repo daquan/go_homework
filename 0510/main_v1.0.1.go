@@ -43,8 +43,17 @@ func main()  {
 		endTime: &end,
 		user: "daquan",
 	}
+
+	task3 := &Task1{
+		id: 3,
+		name: "sleep",
+		status: 0,
+		startTime: &now,
+		endTime: &end,
+		user: "daquan",
+	}
 	//定义一个一个存储Task指针类型的切片,并将task和task2放入切片中
-	tasks := []*Task1{task,task2}
+	tasks := []*Task1{task,task2,task3}
 
 	//创建一个文件类型指针，err忽略
 	file, _ := os.Create("task1.txt")
